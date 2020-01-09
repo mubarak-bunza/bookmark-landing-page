@@ -99,7 +99,7 @@ main #intro-section {
 
 main #intro-section .btn-default:hover {
   color: #252b46;
-  border: 1px solid #5368df;
+  border: 1px solid #9194a1;
 }
 
 main #intro-section .rounded {
@@ -202,6 +202,10 @@ main #features-section .my-btns button {
 
 main #features-section .my-btns button:focus {
   border-bottom: 2px solid red;
+}
+
+main #features-section .my-btns button:hover {
+  color: #fa5757;
 }
 
 @media (max-width: 768px) {
