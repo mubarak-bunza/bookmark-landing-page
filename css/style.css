@@ -97,6 +97,11 @@ main #intro-section {
   }
 }
 
+main #intro-section .btn-default:hover {
+  color: #252b46;
+  border: 1px solid #5368df;
+}
+
 main #intro-section .rounded {
   position: relative;
   z-index: 1;

@@ -124,6 +124,14 @@ main {
 
         @include mobile(){
         }
+
+        .btn-default {
+            &:hover {
+                color: $very-dark-blue;
+                border: 1px solid $soft-blue;
+            }
+        }
+
         .rounded {
             position: relative;
             // top: 200px;
