@@ -4,12 +4,362 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bookmark</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
 </head>
 <body>
-    
+    <header class="container-fluid p-0">
+        <nav id="smNav" class="container-fluid my-nav p-4 hide">
+          <div class="row d-flex justify-content-around mt-5">
+            <div class="">
+              <a class="" href="#">
+                <img class="" src="images/logo-bookmark.svg" style="filter: invert();" alt="logo-bookmark-icon">
+              </a>
+            </div>
+            <div class="">
+              <a id="close" href="#">
+                <img class="" src="images/icon-close.svg" alt="logo-bookmark-icon">
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md text-center d-flex justify-content-center">
+              <ul class="">
+                <li class="">
+                  <a class="" href="#">FEATURES </a>
+                </li>
+                <li class="">
+                  <a class="" href="#">PRICING</a>
+                </li>
+                <li class="">
+                  <a class="" href="#">CONTACT</a>
+                </li>
+                <li class="smlogin">
+                  <a class="" href="#">LOGIN</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="icons">
+              <a href="#">
+                <img class="" src="images/icon-facebook.svg" alt="facebook-icon">
+              </a>
+              <a href="#">
+                <img class="" src="images/icon-twitter.svg" alt="twitter-icon">
+              </a>
+            </div>
+          </div>
+        </nav>
+        <nav id="lgNav" class="container navbar navbar-expand-lg navbar-light mt-5 ">
+          <a class="navbar-brand" href="#">
+              <img class="" src="images/logo-bookmark.svg" alt="logo-bookmark-icon">
+          </a>
+          <button id="open" class="navbar-toggler" type="button">
+            <img src="images/icon-hamburger.svg" alt="icon-hamburger">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                  <a class="nav-link" href="#">FEATURES </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">PRICING</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+              </li>
+              <li class="nav-item login">
+                  <a class="nav-link" href="#">LOGIN</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </header> 
+    <!-- <header>
+        <nav>
+            <div class="brand-image">
+                <img src="images/logo-bookmark.svg" alt="">
+            </div>
+        </nav>
+    </header> -->
+    <main>
+        <section id="intro-section" class="container-fluid mb-5">
+            <div class="container rounded">
+                <div class="rounded-desc">
+                    <h2>A Simple Bookmark <span class="d-block">Manager</span></h2>
+                    <p>
+                      A clean and simple interface to organize your favourite websites. Open a new 
+                      browser tab and see your sites load instantly. Try it for free.
+                    </p>
+                    <button class="btn btn-primary">Get it on Chrome</button>
+                    <button class="btn btn-default bg-light shadow">Get it on Firefox</button>
+                </div>
+                <div class="">
+                    <img class="rounded-image" src="images/illustration-hero.svg" alt="hero-icon">
+                </div>
+            </div>
+            <div class="rounded-shape ml-auto">
+                
+            </div>
+        </section>
+        <section id="features-section" class="container-fluid ">
+            <div class="container rounded">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <h3>Features</h3>
+                        <p>
+                            Our aim is to make it quick and easy for you to access your 
+                            favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md">
+                    <div class="container-fluid my-4">
+                      <div class="row my-btns mb-5 justify-content-center">
+                        <button id="bookmarkBtn">Simple Bookmarking</button>
+                        <button id="searchingBtn">Speady Searching</button>
+                        <button id="sharingBtn">Easy Sharing</button>
+                      </div>
+                      <!-- feature-info -->
+                      <div id="bookmark" class="row d-flex align-items-center active">
+                        <div class="col-md text-center">
+                          <img class="rounded-image" src="images/illustration-features-tab-1.svg" alt="illustration-features-tab-1">
+                        </div>
+                        <div class="col-md feature-desc">
+                          <h3>Bookmark in one click</h3>
+                          <p>
+                            Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                            gives you complete control over how you manage your favourite sites.
+                          </p>
+                          <button class="btn btn-primary">More Info</button>
+                        </div>
+                      </div>
+                      <!-- /feature-info -->
+                      <!-- feature-info -->
+                      <div id="searching" class="row d-flex align-items-center hide">
+                        <div class="col-md text-center">
+                          <img class="rounded-image" src="images/illustration-features-tab-2.svg" alt="illustration-features-tab-1">
+                        </div>
+                        <div class="col-md feature-desc">
+                          <h3>Intelligent search</h3>
+                          <p>
+                            Our powerful search feature will help you find saved sites in no time at all. 
+                            No need to trawl through all of your bookmarks.
+                          </p>
+                          <button class="btn btn-primary">More Info</button>
+                        </div>
+                      </div>
+                      <!-- /feature-info -->
+                      <!-- feature-info -->
+                      <div id="sharing" class="row d-flex align-items-center hide">
+                        <div class="col-md text-center">
+                          <img class="rounded-image" src="images/illustration-features-tab-3.svg" alt="illustration-features-tab-1">
+                        </div>
+                        <div class="col-md feature-desc">
+                          <h3>Share your bookmarks</h3>
+                          <p>
+                            Easily share your bookmarks and collections with others. Create a shareable 
+                            link that you can send at the click of a button.
+                          </p>
+                          <button class="btn btn-primary">More Info</button>
+                        </div>
+                      </div>
+                      <!-- /feature-info -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="rounded-shape">
 
+            </div>
+        </section>
+        <section id="download-section" class="container my-5 w-75">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+              <h3>Download the extension</h3>
+              <p>
+                We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+                got a favourite you’d like us to prioritize.
+              </p>
+            </div>
+          </div>
+          <div class="row my-cards my-4">
+            <!-- card -->
+            <div class="col-md-4 d-flex justify-content-center">
+              <div class="card">
+                <div class="mt-4">
+                  <img src="images/logo-chrome.svg" style="width: 38%;" alt="logo-chrome">
+                </div>
+                <div class="card-body px-0">
+                  <h5 class="card-title">Add to Chrome</h5>
+                  <p class="card-text"> Minimum version 62</p>
+                  <img src="images/bg-dots.svg" style="width: 100%;" alt="big-dot">
+                  <a href="#" class="btn btn-primary py-2 px-3 mt-4">Add & Install Extension</a>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+              <div class="card">
+                <div class="mt-4">
+                  <img src="images/logo-firefox.svg" style="width: 38%;" alt="logo-chrome">
+                </div>
+                <div class="card-body px-0">
+                  <h5 class="card-title">Add to Fireforx</h5>
+                  <p class="card-text"> Minimum version 55</p>
+                  <img src="images/bg-dots.svg" style="width: 100%;" alt="big-dot">
+                  <a href="#" class="btn btn-primary py-2 px-3 mt-4">Add & Install Extension</a>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div class="col-md-4 d-flex justify-content-center align-items-end">
+              <div class="card">
+                <div class="mt-4">
+                  <img src="images/logo-opera.svg" style="width: 38%;" alt="logo-chrome">
+                </div>
+                <div class="card-body px-0">
+                  <h5 class="card-title">Add to Opera</h5>
+                  <p class="card-text"> Minimum version 46</p>
+                  <img src="images/bg-dots.svg" style="width: 100%;" alt="big-dot">
+                  <a href="#" class="btn btn-primary py-2 px-3 mt-4">Add & Install Extension</a>
+                </div>
+              </div>
+            </div>
+            <!-- /card -->
+          </div>
+        </section>
+        <section id="faq-section" class="container w-75 my-5">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+              <h3>Frequently Asked Questions</h3>
+              <p>
+                Here are some of our FAQs. If you have any other questions you’d like 
+                answered please feel free to email us.
+              </p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="container">
+              <div class="row d-flex justify-content-center">
+                <!-- accordion-card -->
+                <div class="card col-md-8">
+                  <div class="card-body" id="accordionBtn1">
+                    What is Bookmark?
+                    <img src="images/icon-arrow.svg" class="float-right " id="arrowDown1" alt="icon-arrow">
+                    <!-- <img src="images/icon-arrow.png" class="float-right hide-arr" id="arrowUp1" alt="icon-arrow"> -->
+                  </div>
+                  <div class="card-body hide" id="accordionBody1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                  </div>
+                </div>
+                <!-- /accordion-card -->
+                <div class="card col-md-8">
+                  <div class="card-body" id="accordionBtn2">
+                    How can I request a new browser?
+                    <img src="images/icon-arrow.svg" class="float-right " id="arrowDown1" alt="icon-arrow">
+                  </div>
+                  <div class="card-body hide" id="accordionBody2">
+                    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+                    Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+                    ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+                    Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                  </div>
+                </div>
+                <!-- /accordion-card -->
+                <!-- accordion-card -->
+                <div class="card col-md-8 ">
+                  <div class="card-body" id="accordionBtn3">
+                    Is there a mobile app?
+                    <img src="images/icon-arrow.svg" class="float-right " id="arrowDown1" alt="icon-arrow">
+                  </div>
+                  <div class="card-body hide" id="accordionBody3">
+                    Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+                    urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+                    sollicitudin ex et ultricies bibendum.
+                  </div>
+                </div>
+                <!-- /accordion-card -->
+                <!-- accordion-card -->
+                <div class="card col-md-8">
+                  <div class="card-body" id="accordionBtn4">
+                    What about other Chromium browsers?
+                    <img src="images/icon-arrow.svg" class="float-right " id="arrowDown1" alt="icon-arrow">
+                  </div>
+                  <div class="card-body hide" id="accordionBody4">
+                    Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+                    vitae neque eget nisl gravida pellentesque non ut velit.
+                  </div>
+                </div>
+                <!-- /accordion-card -->
+                <div class="col-md-8 mt-3 text-center">
+                  <button class="btn btn-primary">More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="container-fluid p-0">
+      <div class="container">
+        <div class="row text-center py-5">
+          <div class="col-md">
+            <p>35,000+ already joined</p>
+            <h3>
+              Stay up-to-date with what <span class="d-block"> we’re doing </span>
+            </h3>
+            <form action="#">
+              <input type="text" name="email" id="email" placeholder="Enter your email address" required>
+              <button class="btn contact-us">Contact Us</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid social">
+        <nav class="container">
+          <div class="row align-items-center justify-content-center py-3 ">
+            <div class="col-md-2 mb-3">
+              <img src="images/logo-bookmark.svg" style="filter: invert();" alt="logo-bookmark">
+            </div>
+            <div class="col-md-6 mb-3">
+              <ul class="list m-0">
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">CONTACT</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-3 text-center icons">
+              <a href="#">
+                <img src="images/icon-facebook.svg" alt="facebook-icon">
+              </a>
+              <a href="#">
+                <img src="images/icon-twitter.svg" alt="twitter-icon">
+              </a> 
+            </div>
+          </div>
+        </nav>
+      </div>
+        <!-- <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/mubarak-bunza">M. A. Bunza</a>.
+        </p> -->
+    </footer>
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

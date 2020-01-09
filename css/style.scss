@@ -1,0 +1,387 @@
+// colors
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+$grayish-blue: hsl(229, 8%, 60%);
+$very-dark-blue: hsl(229, 31%, 21%);
+
+// fonts
+$font-size: 16px;
+$font-family: 'Rubik', sans-serif;
+
+// devices
+$mobile: 375px;
+$ipad: 768px;
+$desktop: 1440px;
+
+@mixin ipad {
+    @media (max-width: #{$ipad}){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}){
+        @content;
+    }
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+// header
+
+header {
+    .my-nav{
+        position: fixed;
+        height: 80vh;
+        background-color: $very-dark-blue;
+        z-index: 10;
+        opacity: 0.9;
+        ul {
+            margin-top: 50px;
+            padding: 0px;
+            width: 80%;
+            li {
+                list-style: none;
+                padding: 10px 0px;
+                border-top: 1px solid white;
+                width: 100%;
+            }
+            a{
+                color: white;
+            }
+
+            .smlogin {
+                border: 1px solid white;
+            }
+        }
+        .icons {
+            margin-top: 80px;
+            a {
+                margin-left: 30px;
+                text-align: center;
+                &:hover {
+                    background-color: $soft-red;
+                }
+            }
+        }
+    }
+    ul{
+        li{
+            padding: 0px 15px;
+            &:hover {
+                a{
+                    color: $soft-red !important;
+                    text-decoration: none;
+                }
+            }
+        }
+        .login {
+            background-color: $soft-red;
+            border-radius: 5px;
+            border: 1px solid $soft-red;
+            a{
+                color: white !important;
+            }
+
+            &:hover{
+                background-color: white;
+                a{
+                    color: $soft-red !important;
+                }
+            }
+        }
+
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+}
+
+// main
+main {
+    .btn {
+
+        &:hover {
+            background-color: white;
+            color: $very-dark-blue;
+        }
+    }
+    #intro-section{
+        height: 80vh;
+        padding-top: 100px;
+        @include ipad(){
+            min-height: 120vh;
+            padding-top: 100px;
+        }
+
+        @include mobile(){
+        }
+        .rounded {
+            position: relative;
+            // top: 200px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+
+            @include ipad(){
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .rounded-desc {
+                @include ipad(){
+                    // margin-top: 100px;
+                }
+                @include mobile(){
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .rounded-image {
+            width: 550px;
+            position: relative;
+            left: 50px;
+
+            @include ipad(){
+                left: 0px;
+                width: 600px;
+            }
+            @include  mobile(){
+                width: 105%;
+            }
+        }
+
+        .rounded-shape {
+            height: 280px;
+            width: 400px;
+            background-color: $soft-blue;
+            border-top-left-radius: 40%;
+            border-bottom-left-radius: 40%;
+            margin-right: -15px;
+            position: relative;
+            top: -250px;
+
+            @include ipad(){
+                top: -485px;
+                width: 470px;
+            }
+
+            @include mobile(){
+                height: 170px;
+                width: 75%;
+                top: -420px;
+            }
+        }
+    }
+
+    #features-section{
+        height: 105vh;
+
+        @include ipad(){
+            height: 145vh;
+
+            .row {
+                text-align: center;
+                div[class*="feature-desc"]{
+                    margin-top: 60px;
+                }
+            }
+        }
+        .my-btns {
+            button {
+                border: unset;
+                padding: 10px 20px;
+                background-color: white;
+                border-bottom: 1px solid black;
+                border-radius: 0px;
+                margin: 0px -2px;
+                outline: none;
+                &:focus {
+                    border-bottom: 2px solid red;
+                }
+
+                @include ipad(){
+                    display: block;
+                    // text-align: center !important;
+                    width: 70%;
+                    &:first-child {
+                        border-top: 1px solid black;
+                    }
+                }
+            }
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .rounded {
+            position: relative;
+            z-index: 1;
+        }
+
+        .rounded-image {
+            width: 400px;
+
+            @include ipad(){
+                width: 300px;
+            }
+        }
+        .rounded-shape {
+            height: 280px;
+            width: 400px;
+            background-color: $soft-blue;
+            border-top-right-radius: 40%;
+            border-bottom-right-radius: 40%;
+            margin-left: -15px;
+            position: relative;
+            top: -250px;
+
+            
+            @include ipad(){
+                top: -420px;
+                width: 350px;
+                height: 220px;
+            }
+            @include mobile(){
+                top: -450px;
+                width: 250px;
+                height: 170px;
+            }
+        }
+    }
+
+    #download-section {
+        .my-cards {
+            min-height: 420px;
+        }
+       
+        .card{
+            width: 300px;
+            height: 350px;
+            text-align: center;
+            border: unset;
+            border-radius: 10px;
+            box-shadow: 0px 13px 11px 2px rgba(0,0,0,0.05);
+
+            @include ipad(){
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    #faq-section {
+        .card {
+            border: unset;
+            border-radius: unset;
+            border-top: 1px solid;
+            
+            &:last-child{
+                border-bottom: 1px solid;
+            }
+        }
+
+        #accordionBtn1, #accordionBtn2,
+        #accordionBtn3, #accordionBtn4 {
+            // background-image: url("images/icon-arrow.png");
+            &:hover {
+                color: $soft-red;
+                cursor: pointer;
+            } 
+        }
+        .hide {
+            display: none !important;
+        }
+
+        .show {
+            display: block;
+        }
+    }
+}
+
+footer {
+    background-color: $soft-blue;
+    color: white;
+    @include ipad(){
+        text-align: center;
+    }
+
+    input{
+      padding: 10px 25px;
+      border: 0px;
+      border-radius: 5px;
+      margin-right: 15px;
+      
+      @include mobile(){
+          margin-right: 0px;
+          margin-bottom: 15px;
+          width: 80%;
+      }
+        
+    }
+
+    .contact-us {
+        background-color: $soft-red;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $soft-red;
+        color: white ;
+
+        &:hover{
+            background-color: white;
+            color: $soft-red !important;
+        }
+
+        @include mobile(){
+            width: 80%;
+        }
+    }
+
+    .social {
+        background-color: $very-dark-blue;
+    }
+
+    .list {
+        list-style-type: none;
+        
+        li{
+           display: inline;
+           margin-right: 20px;
+
+           @include ipad(){
+               display: block;
+           }
+        }
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: $soft-red;
+            }
+        }
+    }
+
+    .icons {
+        a {
+            margin-left: 20px;
+            text-align: center;
+            &:hover {
+                background-color: $soft-red;
+            }
+        }
+    }
+}
