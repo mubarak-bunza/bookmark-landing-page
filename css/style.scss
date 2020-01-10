@@ -28,6 +28,10 @@ $desktop: 1440px;
 body {
     font-family: $font-family;
     font-size: $font-size;
+
+    p {
+        color: $grayish-blue;
+    }
 }
 
 // header
@@ -209,13 +213,13 @@ main {
                 border: unset;
                 padding: 10px 20px;
                 background-color: white;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid $grayish-blue;
                 border-radius: 0px;
                 margin: 0px -2px;
                 outline: none;
-                &:focus {
+                // &:focus {
                     // border-bottom: 2px solid red;
-                }
+                // }
                 &:hover {
                    color: $soft-red; 
                 }
@@ -301,13 +305,13 @@ main {
         .card {
             border: unset;
             border-radius: unset;
-            border-top: 1px solid;
+            border-top: 1px solid $grayish-blue;
             
-            &:last-child{
-                border-bottom: 1px solid;
-            }
         }
-
+        .border-bottom{
+            border-bottom: 1px solid $grayish-blue !important;
+        }
+        
         #accordionBtn1, #accordionBtn2,
         #accordionBtn3, #accordionBtn4 {
             // background-image: url("images/icon-arrow.png");

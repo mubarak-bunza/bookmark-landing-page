@@ -3,6 +3,10 @@ body {
   font-size: 16px;
 }
 
+body p {
+  color: #9194a1;
+}
+
 header .my-nav {
   position: fixed;
   height: 80vh;
@@ -194,7 +198,7 @@ main #features-section .my-btns button {
   border: unset;
   padding: 10px 20px;
   background-color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #9194a1;
   border-radius: 0px;
   margin: 0px -2px;
   outline: none;
@@ -291,11 +295,11 @@ main #download-section .card {
 main #faq-section .card {
   border: unset;
   border-radius: unset;
-  border-top: 1px solid;
+  border-top: 1px solid #9194a1;
 }
 
-main #faq-section .card:last-child {
-  border-bottom: 1px solid;
+main #faq-section .border-bottom {
+  border-bottom: 1px solid #9194a1 !important;
 }
 
 main #faq-section #accordionBtn1:hover, main #faq-section #accordionBtn2:hover,
