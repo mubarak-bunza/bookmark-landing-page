@@ -200,10 +200,6 @@ main #features-section .my-btns button {
   outline: none;
 }
 
-main #features-section .my-btns button:focus {
-  border-bottom: 2px solid red;
-}
-
 main #features-section .my-btns button:hover {
   color: #fa5757;
 }
@@ -216,6 +212,10 @@ main #features-section .my-btns button:hover {
   main #features-section .my-btns button:first-child {
     border-top: 1px solid black;
   }
+}
+
+main #features-section .my-btns .bottom-border {
+  border-bottom: 2px solid red;
 }
 
 main #features-section .hide {

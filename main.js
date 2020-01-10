@@ -31,7 +31,10 @@ let searching = document.querySelector('#searching')
 let sharing = document.querySelector('#sharing');
 
 bookmarkBtn.addEventListener('click', function(){
-    
+    bookmarkBtn.classList.add('bottom-border');
+    searchingBtn.classList.remove('bottom-border');
+    sharingBtn.classList.remove('bottom-border');
+
     if(bookmark.classList.contains('hide')){
         bookmark.classList.remove('hide');
         bookmark.classList.add('active');
@@ -50,6 +53,10 @@ bookmarkBtn.addEventListener('click', function(){
 
 searchingBtn.addEventListener('click', function(){
     
+    bookmarkBtn.classList.remove('bottom-border');
+    searchingBtn.classList.add('bottom-border');
+    sharingBtn.classList.remove('bottom-border');
+
     if(bookmark.classList.contains('active')){
         bookmark.classList.remove('active');
         bookmark.classList.add('hide');
@@ -68,6 +75,10 @@ searchingBtn.addEventListener('click', function(){
 
 sharingBtn.addEventListener('click', function(){
     
+    bookmarkBtn.classList.remove('bottom-border');
+    searchingBtn.classList.remove('bottom-border');
+    sharingBtn.classList.add('bottom-border');
+
     if(bookmark.classList.contains('active')){
         bookmark.classList.remove('active');
         bookmark.classList.add('hide');
