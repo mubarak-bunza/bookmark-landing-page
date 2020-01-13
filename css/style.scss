@@ -314,7 +314,7 @@ main {
         
         #accordionBtn1, #accordionBtn2,
         #accordionBtn3, #accordionBtn4 {
-            // background-image: url("images/icon-arrow.png");
+            background-image: url("images/icon-arrow.png");
             &:hover {
                 color: $soft-red;
                 cursor: pointer;
